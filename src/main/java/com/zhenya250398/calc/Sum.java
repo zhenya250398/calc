@@ -1,3 +1,5 @@
+package com.zhenya250398.calc;
+
 public class Sum{
 
     public static double sum(double num1, double num2){

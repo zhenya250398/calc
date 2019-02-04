@@ -1,4 +1,6 @@
+package com.zhenya250398.calc;
 
+import com.zhenya250398.calc.Calc;
 
 public class Main {
 
