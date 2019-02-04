@@ -1,3 +1,5 @@
+package com.zhenya250398.calc;
+
 public  class Calc{
     public  static double opManager(double num1,String op,double num2){
 
