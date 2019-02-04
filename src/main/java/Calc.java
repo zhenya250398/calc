@@ -15,7 +15,6 @@ public  class Calc{
             Div div = new Div();
             res = div.div(num1, num2);
         }
-        System.out.println("ytn");
         return res;
     }
 }
