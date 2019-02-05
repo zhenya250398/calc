@@ -1,21 +1,30 @@
 package com.zhenya250398.calc;
 
 public  class Calc{
-    public  static double opManager(double num1,String op,double num2){
 
+    private final MathOperation sum;
+    private final MathOperation sub;
+    private final MathOperation mul;
+    private final MathOperation div;
+
+    public Calc(MathOperation sum, MathOperation sub, MathOperation mul, MathOperation div) {
+        this.sum = sum;
+        this.sub = sub;
+        this.mul = mul;
+        this.div = div;
+    }
+
+
+    public double calculation(double num1, String op, double num2){
         double res=0;
         if ("+".equals(op)) {
-            Sum sum = new Sum();
-            res = sum.sum(num1, num2);
+            res = sum.perform(num1, num2);
         } else if ("-".equals(op)) {
-            Sub sub = new Sub();
-            res = sub.sub(num1, num2);
+            res = sub.perform(num1, num2);
         } else if ("*".equals(op)) {
-            Mul mul = new Mul();
-            res = mul.mul(num1, num2);
+            res = mul.perform(num1, num2);
         } else if ("/".equals(op)) {
-            Div div = new Div();
-            res = div.div(num1, num2);
+            res = div.perform(num1, num2);
         }
         return res;
     }
