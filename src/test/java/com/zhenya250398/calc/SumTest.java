@@ -6,7 +6,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
 import static org.apache.commons.lang3.RandomUtils.nextDouble;
@@ -22,6 +21,6 @@ class SumTest {
     @MethodSource("numGen")
     void testSumOne(double num1,double num2){
 
-        Assertions.assertEquals( num1+num2 , Sum.sum(num1, num2));
+        Assertions.assertEquals( num1+num2 ,new Sum().perform(num1, num2));
     }
 }

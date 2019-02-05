@@ -8,7 +8,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.apache.commons.lang3.RandomUtils.nextDouble;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MulTest {
     public static final int LIMIT = 10;
@@ -21,6 +20,6 @@ class MulTest {
     @MethodSource("numGen")
     void testMulOne(double num1,double num2){
 
-        Assertions.assertEquals( num1*num2 , Mul.mul(num1, num2));
+        Assertions.assertEquals( num1*num2 ,new Mul().perform(num1, num2));
     }
 }

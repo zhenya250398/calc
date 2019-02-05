@@ -8,7 +8,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.apache.commons.lang3.RandomUtils.nextDouble;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SubTest {
     public static final int LIMIT = 10;
@@ -21,6 +20,6 @@ class SubTest {
     @MethodSource("numGen")
     void testSubOne(double num1,double num2){
 
-        Assertions.assertEquals( num1-num2 , Sub.sub(num1, num2));
+        Assertions.assertEquals( num1-num2 ,new Sub().perform(num1, num2));
     }
 }
