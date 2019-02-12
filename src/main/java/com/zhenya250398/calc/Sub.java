@@ -4,9 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Sub implements MathOperation {
+
+    private static final Logger logger = LoggerFactory.getLogger(Sub.class);
+
     @Override
     public double perform(double num1, double num2) {
-        Logger logger = LoggerFactory.getLogger(Sub.class);
         logger.info("first number: {}, second number: {}", num1, num2);
         double res = num1 - num2;
         logger.debug("result: {}", res);
